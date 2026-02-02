@@ -69,10 +69,16 @@ const messages = [
 let messageIndex = 0;
 
 function handleYesClick() {
-    const yesButton = document.querySelector('.yes-button');
+    if (messageIndex === messages.length - 1) {
+        // After showing the last message, next click goes to success page
+        window.location.href = "yes_page.html";
+        return;
+    }
+    
+    const promptText = document.querySelector('.prompt-text');
     const noButton = document.querySelector('.no-button');
-    yesButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
+    promptText.textContent = messages[messageIndex];
+    messageIndex = messageIndex + 1;
     const currentSize = parseFloat(window.getComputedStyle(noButton).fontSize);
     noButton.style.fontSize = `${currentSize * 1.15}px`;
 }
