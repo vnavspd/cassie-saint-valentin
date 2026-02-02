@@ -74,7 +74,7 @@ function handleYesClick() {
     yesButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     const currentSize = parseFloat(window.getComputedStyle(noButton).fontSize);
-    noButton.style.fontSize = `${currentSize * 1.5}px`;
+    noButton.style.fontSize = `${currentSize * 1.15}px`;
 }
 
 function handleNoClick() {
