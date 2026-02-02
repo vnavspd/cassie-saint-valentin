@@ -54,11 +54,11 @@
 })();
 */
 const messages = [
-    "Tu es sûre?",
+    "T'es sûre?",
     "Vraiment sûre??",
-    "Tu es certaine?",
-    "S'il te plaît mon cœur...",
-    "Penses s'y!",
+    "T'es certaine?",
+    "S'il te plaît mon chérie...",
+    "Pense s'y bien!",
     "Si tu dis non, je serai vraiment triste...",
     "Je serai très triste...",
     "Je serai très très très triste...",
@@ -68,15 +68,15 @@ const messages = [
 
 let messageIndex = 0;
 
-function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
+function handleYesClick() {
     const yesButton = document.querySelector('.yes-button');
-    noButton.textContent = messages[messageIndex];
+    const noButton = document.querySelector('.no-button');
+    yesButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    const currentSize = parseFloat(window.getComputedStyle(noButton).fontSize);
+    noButton.style.fontSize = `${currentSize * 1.5}px`;
 }
 
-function handleYesClick() {
-    window.location.href = "yes_page.html";
+function handleNoClick() {
+    window.location.href = "no_page.html";
 }
