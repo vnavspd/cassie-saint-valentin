@@ -90,14 +90,11 @@ function handleYesClick() {
     }
     
     const promptText = document.querySelector('.prompt-text');
-    const noButton = document.querySelector('.no-button');
     const gifImage = document.querySelector('.gif_container img');
     
     promptText.textContent = messages[messageIndex];
     gifImage.src = gifs[messageIndex];
     messageIndex = messageIndex + 1;
-    const currentSize = parseFloat(window.getComputedStyle(noButton).fontSize);
-    noButton.style.fontSize = `${currentSize * 1.15}px`;
 }
 
 function handleNoClick() {
