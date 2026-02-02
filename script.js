@@ -57,7 +57,7 @@ const messages = [
     "T'es sûre?",
     "Vraiment sûre??",
     "T'es certaine?",
-    "S'il te plaît ma chérie...",
+    "S'il te plaît...",
     "Pense s'y bien!",
     "Si tu dis non, je serai vraiment triste...",
     "Je serai très triste...",
@@ -69,8 +69,8 @@ const messages = [
 let messageIndex = 0;
 
 function handleYesClick() {
-    if (messageIndex === messages.length - 1) {
-        // After showing the last message, next click goes to success page
+    if (messageIndex === messages.length) {
+        // After all messages shown, next click goes to success page
         window.location.href = "yes_page.html";
         return;
     }
