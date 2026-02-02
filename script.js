@@ -57,7 +57,7 @@ const messages = [
     "T'es sûre?",
     "Vraiment sûre??",
     "T'es certaine?",
-    "S'il te plaît mon chérie...",
+    "S'il te plaît ma chérie...",
     "Pense s'y bien!",
     "Si tu dis non, je serai vraiment triste...",
     "Je serai très triste...",
